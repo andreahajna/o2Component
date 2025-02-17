@@ -1,0 +1,52 @@
+/* Surface Colors */
+$color-surface-x-high: #8C8C9A;
+$color-surface-x-low: #FFFFFF;
+$color-surface-brand: #0050FF;
+$color-surface-danger: #DC2828;
+$color-surface-danger-variant: #FFDCDC;
+$color-surface-warning: #A56315;
+$color-surface-warning-variant: #FAF1B6;
+
+/* Content Colors */
+$color-content-on-neutral-xx-high: #2C2C31;
+$color-content-on-neutral-medium: #8C8C9A;
+$color-content-on-neutral-low: #C9C9CE;
+$color-content-on-neutral-danger: #DC2828;
+$color-content-on-neutral-warning: #A56315;
+
+/* State Colors */
+$color-state-default-hover: rgba(26, 26, 26, 0.06);
+$color-state-default-focus: rgba(26, 26, 26, 0.80);
+
+/* Font Family */
+$font-family: "On Air Var";
+
+/* Label M */
+$font-label-m-size: 16px;
+$font-label-m-weight: 500;
+$font-label-m-line-height: 22px;
+$font-label-m-letter-spacing: 0.16px;
+
+/* Label S */
+$font-label-s-size: 14px;
+$font-label-s-weight: 550;
+$font-label-s-line-height: 17px;
+$font-label-s-letter-spacing: 0.16px;
+
+/* Body M */
+$font-body-m-size: 16px;
+$font-body-m-weight: 400;
+$font-body-m-line-height: 22px;
+$font-body-m-letter-spacing: 0.01px;
+$font-body-m-paragraph-spacing: 20px;
+$font-body-m-list-spacing: 6px;
+
+
+/* Radius */
+$dimension-radius-input: 12px;
+
+/* Spacing */
+$dimension-xs: 8px;
+$dimension-s: 12px;
+$dimension-m: 16px;
+$dimension-l: 20px;

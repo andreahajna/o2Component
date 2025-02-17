@@ -1,0 +1,21 @@
+@use 'assets/styles';
+
+
+.textInput {
+    background-color: styles.$color-surface-x-low;
+    border: 1px solid styles.$color-surface-x-high;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    margin: 10px;
+
+    &:focus {
+        border-color: styles.$color-state-default-focus;
+        caret-color: styles.$color-surface-brand;
+    }
+
+    &:hover {
+        border-color: styles.$color-state-default-hover;
+    }
+
+}
