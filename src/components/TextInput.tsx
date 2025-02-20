@@ -29,8 +29,8 @@ const TextInput: FC<TextInputProps> = ({
   const labelClassName = disabled ? 'disabled' : error ? 'error' : warning ? 'warning' : '';
 
   return (
-    <div className={'textInputGroup'}>
-      <div className={'labelGroup'}>
+    <div className='textInputGroup'>
+      <div className='labelGroup'>
         <label htmlFor={name} className={`label size-m ${labelClassName}`}>
           {label}
         </label>

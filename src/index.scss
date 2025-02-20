@@ -1,124 +1,123 @@
 @use 'assets/styles';
 
 body {
-    font-family: styles.$font-family;
-    margin: 20px;
+  font-family: styles.$font-family;
+  margin: 20px;
 }
 
 .textInputGroup {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
 }
 
-.labelGroup{
-    display: flex;
-    align-items: center;
-    gap: styles.$dimension-xs
+.labelGroup {
+  display: flex;
+  align-items: center;
+  gap: styles.$dimension-xs;
 }
 
 .label {
-    color: styles.$color-content-on-neutral-medium;
-    font-size: styles.$font-label-s-size;
-    font-weight: styles.$font-label-s-weight;
-    line-height: styles.$font-label-s-line-height;
-    letter-spacing: styles.$font-label-s-letter-spacing;
+  color: styles.$color-content-on-neutral-medium;
+  font-size: styles.$font-label-s-size;
+  font-weight: styles.$font-label-s-weight;
+  line-height: styles.$font-label-s-line-height;
+  letter-spacing: styles.$font-label-s-letter-spacing;
 
-    &.size-m {
-        color: styles.$color-content-on-neutral-xx-high;
-        font-size: styles.$font-label-m-size;
-        font-weight: styles.$font-label-m-weight;
-        line-height: styles.$font-body-m-line-height;
-        letter-spacing: styles.$font-label-m-letter-spacing;
-    }
+  &.size-m {
+    color: styles.$color-content-on-neutral-xx-high;
+    font-size: styles.$font-label-m-size;
+    font-weight: styles.$font-label-m-weight;
+    line-height: styles.$font-body-m-line-height;
+    letter-spacing: styles.$font-label-m-letter-spacing;
+  }
 
-    &.error {
-        color: styles.$color-content-on-neutral-danger;
-    }
+  &.error {
+    color: styles.$color-content-on-neutral-danger;
+  }
 
-    &.warning {
-        color: styles.$color-content-on-neutral-warning;
-    }
+  &.warning {
+    color: styles.$color-content-on-neutral-warning;
+  }
 
-    &.disabled {
-        color: styles.$color-content-on-neutral-low;
-    }
+  &.disabled {
+    color: styles.$color-content-on-neutral-low;
+  }
 }
 
 .textInput {
-    border-radius: styles.$dimension-radius-input;
-    padding: styles.$dimension-xs;
-    width: 100%;
-    font-size: styles.$font-body-m-size;
-    font-weight: styles.$font-body-m-weight;
-    line-height: styles.$font-body-m-line-height;
-    letter-spacing: styles.$font-body-m-letter-spacing;
-    background-color: styles.$color-surface-x-low;
-    color: styles.$color-content-on-neutral-xx-high;
-    border: 1px solid styles.$color-surface-x-high;
+  border-radius: styles.$dimension-radius-input;
+  padding: styles.$dimension-xs;
+  width: 100%;
+  font-size: styles.$font-body-m-size;
+  font-weight: styles.$font-body-m-weight;
+  line-height: styles.$font-body-m-line-height;
+  letter-spacing: styles.$font-body-m-letter-spacing;
+  background-color: styles.$color-surface-x-low;
+  color: styles.$color-content-on-neutral-xx-high;
+  border: 1px solid styles.$color-surface-x-high;
 
-    &::placeholder {
-        color: styles.$color-content-on-neutral-low;
-    }
+  &::placeholder {
+    color: styles.$color-content-on-neutral-low;
+  }
+
+  &:focus {
+    border-color: 1px solid styles.$color-state-default-focus;
+    caret-color: styles.$color-surface-brand;
+  }
+
+  &:not(.disabled):hover {
+    border-color: styles.$color-state-default-hover-variant;
+  }
+
+  &.disabled {
+    border-color: styles.$color-content-on-neutral-low;
+    color: styles.$color-content-on-neutral-low;
+  }
+
+  &.size-xs {
+    padding: styles.$dimension-xs;
+  }
+
+  &.size-s {
+    padding: styles.$dimension-s;
+  }
+
+  &.size-m {
+    padding: styles.$dimension-m;
+  }
+
+  &.size-l {
+    padding: styles.$dimension-l;
+  }
+
+  &.error {
+    border-color: styles.$color-surface-danger;
+    //background-color: styles.$color-surface-danger-variant;
 
     &:focus {
-        border-color: 1px solid styles.$color-state-default-focus;
-        caret-color: styles.$color-surface-brand;
+      outline: none;
+      border-color: styles.$color-surface-danger;
+      caret-color: styles.$color-content-on-neutral-xx-high;
     }
 
     &:not(.disabled):hover {
-        border-color: styles.$color-state-default-hover-variant;
+      border-color: styles.$color-surface-danger;
+    }
+  }
+
+  &.warning {
+    border-color: styles.$color-surface-warning;
+    //background-color: styles.$color-surface-warning-variant;
+
+    &:focus {
+      outline: none;
+      border-color: styles.$color-surface-warning;
+      caret-color: styles.$color-content-on-neutral-xx-high;
     }
 
-    &.disabled {
-        border-color: styles.$color-content-on-neutral-low;
-        color: styles.$color-content-on-neutral-low;
+    &:not(.disabled):hover {
+      border-color: styles.$color-surface-warning;
     }
-
-    &.size-xs {
-        padding: styles.$dimension-xs;
-    }
-
-    &.size-s {
-        padding: styles.$dimension-s;
-    }
-
-    &.size-m {
-        padding: styles.$dimension-m;
-    }
-
-    &.size-l {
-        padding: styles.$dimension-l;
-    }
-
-    &.error {
-        border-color: styles.$color-surface-danger;
-        //background-color: styles.$color-surface-danger-variant;
-
-        &:focus {
-            outline: none;
-            border-color: styles.$color-surface-danger;
-            caret-color: styles.$color-content-on-neutral-xx-high;
-        }
-
-        &:not(.disabled):hover {
-            border-color: styles.$color-surface-danger;
-        }
-    }
-
-    &.warning {
-        border-color: styles.$color-surface-warning;
-        //background-color: styles.$color-surface-warning-variant;
-
-        &:focus {
-            outline: none;
-            border-color: styles.$color-surface-warning;
-            caret-color: styles.$color-content-on-neutral-xx-high;
-        }
-
-        &:not(.disabled):hover {
-            border-color: styles.$color-surface-warning;
-        }
-    }
-
+  }
 }

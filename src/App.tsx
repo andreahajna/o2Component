@@ -32,16 +32,8 @@ function App() {
   const handleVariantChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const variantValue = event.target.value;
     setVariant(variantValue as VariantEnum);
-    if (variantValue === 'error') {
-      setErrorMessage('errorMessage');
-    } else {
-      setErrorMessage('');
-    }
-    if (variantValue === 'warning') {
-      setWarningMessage('warningMessage');
-    } else {
-      setWarningMessage('');
-    }
+    setErrorMessage(variantValue === VariantEnum.ERROR ? 'errorMessage' : '');
+    setWarningMessage(variantValue === VariantEnum.WARNING ? 'warningMessage' : '');
   };
 
   return (
