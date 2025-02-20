@@ -121,7 +121,7 @@ function App() {
       <div style={{ display: 'flex' }}>
         <TextInput
           value={value}
-          label={'Label'}
+          label={'Input'}
           optional={'Optional'}
           name={'input'}
           onChange={(value) => {
