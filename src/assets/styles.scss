@@ -15,11 +15,12 @@ $color-content-on-neutral-danger: #DC2828;
 $color-content-on-neutral-warning: #A56315;
 
 /* State Colors */
-$color-state-default-hover: rgba(26, 26, 26, 0.06);
-$color-state-default-focus: rgba(26, 26, 26, 0.80);
+$color-state-default-hover: #1A1A1A0F;
+$color-state-default-hover-variant: #1A1A1A;
+$color-state-default-focus: #1A1A1ACC;
 
 /* Font Family */
-$font-family: "On Air Var";
+$font-family: 'On Air Var';// roboto, sans-serif; // 'On Air Var'
 
 /* Label M */
 $font-label-m-size: 16px;
@@ -40,7 +41,6 @@ $font-body-m-line-height: 22px;
 $font-body-m-letter-spacing: 0.01px;
 $font-body-m-paragraph-spacing: 20px;
 $font-body-m-list-spacing: 6px;
-
 
 /* Radius */
 $dimension-radius-input: 12px;
