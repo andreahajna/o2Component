@@ -1,12 +1,10 @@
 import { FC } from 'react';
-import { InputSize } from '../constants.ts';
 
 interface TextInputProps {
   value: string;
   label: string;
   name: string;
   onChange: (value: string) => void;
-  size?: InputSize;
   error?: string;
   warning?: string;
   placeholder?: string;
@@ -19,7 +17,6 @@ const TextInput: FC<TextInputProps> = ({
   label,
   name,
   onChange,
-  size,
   error,
   warning,
   placeholder,
@@ -31,21 +28,21 @@ const TextInput: FC<TextInputProps> = ({
   return (
     <div className='textInputGroup'>
       <div className='labelGroup'>
-        <label htmlFor={name} className={`label size-m ${labelClassName}`}>
+        <label htmlFor={name} className={`label ${labelClassName}`}>
           {label}
         </label>
-        <div className={`label ${labelClassName}`}>{optional}</div>
+        <div className={`label optional ${labelClassName}`}>{optional}</div>
       </div>
       <input
         name={name}
-        className={`textInput size-${size} ${labelClassName}`}
+        className={`textInput ${labelClassName}`}
         type='text'
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         disabled={disabled}
       />
-      {error || warning ? <div className={`label ${labelClassName}`}>{error ? error : warning}</div> : null}
+      {error || warning ? <div className={`message  ${labelClassName}`}>{error ? error : warning}</div> : null}
     </div>
   );
 };

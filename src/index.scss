@@ -2,35 +2,56 @@
 
 body {
   font-family: styles.$font-family;
-  margin: 20px;
+  margin: styles.$dimension-l;
 }
 
 .textInputGroup {
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  margin: 4px;
 }
 
 .labelGroup {
   display: flex;
   align-items: center;
   gap: styles.$dimension-xs;
+  margin-bottom: 4px;// styles.$dimension-xs;
 }
 
 .label {
-  color: styles.$color-content-on-neutral-medium;
-  font-size: styles.$font-label-s-size;
-  font-weight: styles.$font-label-s-weight;
-  line-height: styles.$font-label-s-line-height;
-  letter-spacing: styles.$font-label-s-letter-spacing;
+  color: styles.$color-content-on-neutral-xx-high;
+  font-size: styles.$font-label-m-size;
+  font-weight: styles.$font-label-m-weight;
+  line-height: styles.$font-body-m-line-height;
+  letter-spacing: styles.$font-label-m-letter-spacing;
 
-  &.size-m {
-    color: styles.$color-content-on-neutral-xx-high;
-    font-size: styles.$font-label-m-size;
-    font-weight: styles.$font-label-m-weight;
-    line-height: styles.$font-body-m-line-height;
-    letter-spacing: styles.$font-label-m-letter-spacing;
+  &.optional {
+    color: styles.$color-content-on-neutral-medium;
+    font-size: styles.$font-label-s-size;
+    font-weight: styles.$font-label-s-weight;
+    line-height: styles.$font-label-s-line-height;
+    letter-spacing: styles.$font-label-s-letter-spacing;
   }
+
+  &.error {
+    color: styles.$color-content-on-neutral-danger;
+  }
+
+  &.warning {
+    color: styles.$color-content-on-neutral-warning;
+  }
+
+  &.disabled {
+    color: styles.$color-content-on-neutral-low;
+  }
+}
+
+.message {
+  color: styles.$color-content-on-neutral-xx-high;
+  font-size: styles.$font-label-m-size;
+  font-weight: styles.$font-label-m-weight;
+  line-height: styles.$font-body-m-line-height;
+  letter-spacing: styles.$font-label-m-letter-spacing;
 
   &.error {
     color: styles.$color-content-on-neutral-danger;
@@ -75,30 +96,14 @@ body {
     color: styles.$color-content-on-neutral-low;
   }
 
-  &.size-xs {
-    padding: styles.$dimension-xs;
-  }
-
-  &.size-s {
-    padding: styles.$dimension-s;
-  }
-
-  &.size-m {
-    padding: styles.$dimension-m;
-  }
-
-  &.size-l {
-    padding: styles.$dimension-l;
-  }
-
   &.error {
-    border-color: styles.$color-surface-danger;
+    border-color: styles.$color-surface-danger-variant;
     //background-color: styles.$color-surface-danger-variant;
 
     &:focus {
       outline: none;
       border-color: styles.$color-surface-danger;
-      caret-color: styles.$color-content-on-neutral-xx-high;
+      caret-color: styles.$color-surface-danger;
     }
 
     &:not(.disabled):hover {
@@ -107,13 +112,13 @@ body {
   }
 
   &.warning {
-    border-color: styles.$color-surface-warning;
+    border-color: styles.$color-surface-warning-variant;
     //background-color: styles.$color-surface-warning-variant;
 
     &:focus {
       outline: none;
       border-color: styles.$color-surface-warning;
-      caret-color: styles.$color-content-on-neutral-xx-high;
+      caret-color: styles.$color-surface-warning;
     }
 
     &:not(.disabled):hover {
