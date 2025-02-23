@@ -15,7 +15,7 @@ body {
   display: flex;
   align-items: center;
   gap: styles.$dimension-xs;
-  margin-bottom: 4px;// styles.$dimension-xs;
+  margin-bottom: 4px;
 }
 
 .label {
@@ -88,7 +88,7 @@ body {
   }
 
   &:not(.disabled):hover {
-    border-color: styles.$color-state-default-hover-variant;
+    border-color: styles.$color-state-default-hover;
   }
 
   &.disabled {
@@ -98,7 +98,6 @@ body {
 
   &.error {
     border-color: styles.$color-surface-danger-variant;
-    //background-color: styles.$color-surface-danger-variant;
 
     &:focus {
       outline: none;
@@ -113,7 +112,6 @@ body {
 
   &.warning {
     border-color: styles.$color-surface-warning-variant;
-    //background-color: styles.$color-surface-warning-variant;
 
     &:focus {
       outline: none;
