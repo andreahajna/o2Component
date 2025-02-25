@@ -14,6 +14,8 @@ enum VariantEnum {
 
 function App() {
   const [disabled, setDisabled] = React.useState(false);
+  const [required, setRequired] = React.useState(false);
+  const [optionalText, setOptionalText] = React.useState('Optional');
   const [value, setValue] = React.useState('');
   const [errorMessage, setErrorMessage] = React.useState('');
   const [warningMessage, setWarningMessage] = React.useState('');
@@ -28,6 +30,11 @@ function App() {
     setVariant(variantValue as VariantEnum);
     setErrorMessage(variantValue === VariantEnum.ERROR ? 'errorMessage' : '');
     setWarningMessage(variantValue === VariantEnum.WARNING ? 'warningMessage' : '');
+  };
+
+  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setRequired(event.target.checked);
+    setOptionalText(event.target.checked ? '' : 'Optional');
   };
 
   return (
@@ -86,12 +93,19 @@ function App() {
         <label htmlFor='warning'>warning</label>
       </div>
 
+      <div>
+        <input type='checkbox' id='required' name='required' onChange={handleCheckboxChange} checked={required} />
+        <label htmlFor='required'>Required</label>
+      </div>
+
       <div style={{ display: 'flex' }}>
         <TextInput
+          id={'textInputO2'}
           value={value}
           label={'Input'}
-          optional={'Optional'}
+          optional={optionalText}
           name={'input'}
+          required={required}
           onChange={(value) => {
             setValue(value);
           }}
